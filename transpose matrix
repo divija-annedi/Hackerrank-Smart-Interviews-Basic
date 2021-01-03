@@ -1,0 +1,54 @@
+Given a matrix of size N x M. Print transpose of the matrix.
+
+Input Format
+
+First line of input contains N, M - the size of the matrix. Its followed by N lines each containing M integers - elements of the matrix.
+
+Constraints
+
+1 <= N, M <= 100
+-109 <= ar[i] <= 109
+
+
+Output Format
+
+Print the transposed matrix.
+
+Sample Input 0
+
+2 2
+5 -1
+19 8
+Sample Output 0
+
+5 19
+-1 8
+Explanation 0
+
+Self Explanatory
+................................
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int row,col;
+    long long int arr[100][100];
+    cin>>row>>col;
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf("%lld ",&arr[i][j]);
+        }
+        
+    }
+    
+    for(int i=0;i<col;i++){
+        
+        for(int j=0;j<row;j++){
+            printf("%lld ",arr[j][i]);
+            if(j==row-1)
+        printf("\n");
+            
+        }
+        
+    }
+}
