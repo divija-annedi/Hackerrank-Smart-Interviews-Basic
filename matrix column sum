@@ -1,0 +1,51 @@
+Given a matrix of size N x M. Print column-wise sum, separated by a newline.
+
+Input Format
+
+The first line of input contains N, M - the size of the matrix. Its followed by N lines each containing M integers - elements of the matrix.
+
+Constraints
+
+1 <= N, M <= 100
+-106 <= ar[i] <= 106
+
+
+Output Format
+
+Print the column wise sum, separated by newline.
+
+Sample Input 0
+
+2 2
+5 -1
+19 8
+Sample Output 0
+
+24
+7
+Explanation 0
+
+Self Explanatory.
+......................................
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+     long long int row,col;
+    long long int arr[100][100],sum;
+    cin>>row>>col;
+    for(long long int i=0;i<row;i++){
+        for(long long int j=0;j<col;j++){
+            scanf("%lld ",&arr[i][j]);
+        }
+        
+    }
+    
+    for(long long int i=0;i<col;i++){
+        sum=0;
+        for(long long int j=0;j<row;j++){
+            sum=sum+arr[j][i];
+        }
+        cout<<sum<<"\n";
+    }
+}
