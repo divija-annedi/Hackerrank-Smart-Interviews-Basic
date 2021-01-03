@@ -1,0 +1,43 @@
+Given sides of a triangle, check whether the triangle is valid.
+
+Input Format
+
+Input contains three integers A, B, C - Sides of the triangle.
+
+Constraints
+
+1 <= A, B, C <= 109
+
+Output Format
+
+Print "Yes" if you can construct a triangle with the given three sides, "No" otherwise.
+
+Sample Input 0
+
+4 3 5
+Sample Output 0
+
+Yes
+Explanation 0
+
+Self Explanatory
+............................
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long long int a,b,c;
+    cin>>a>>b>>c;
+    if((a+b>c ) && (c+a>b ) && (b+c>a ))
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
