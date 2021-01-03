@@ -23,6 +23,7 @@ Sample Output 0
 Explanation 0
 
 Self Explanatory'''
+......................................
 
 n=int(input())
 temp=0
