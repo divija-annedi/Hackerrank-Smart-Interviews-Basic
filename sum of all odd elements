@@ -1,0 +1,52 @@
+Print sum of all odd elements in an array.
+
+Input Format
+
+Input contains 2 lines, first line contains integer N - the size of the array and second line contains array elements.
+
+Constraints
+
+1 <= N <= 102
+-106 <= ar[i] <= 106
+
+
+Output Format
+
+Print sum of all odd elements.
+
+Sample Input 0
+
+5
+6 9 8 4 3
+Sample Output 0
+
+12
+Explanation 0
+
+Self Explanatory
+..............................................
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n;
+    cin>>n;
+    long long int arr[100],sum=0;
+    for(int i=0;i<n;i++){
+        scanf("%lld ",&arr[i]);
+    }
+    for(int i=0;i<n;i++){
+        if(arr[i]%2!=0){
+            sum=sum+arr[i];
+        }
+    }
+    cout<<sum;
+    return 0;
+}
