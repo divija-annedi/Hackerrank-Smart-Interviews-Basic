@@ -1,0 +1,33 @@
+Print hollow rectangle pattern using '*'. See example for more details.
+
+Input Format
+
+Input contains two integers W and L. W - width of the rectangle, L - length of the rectangle.
+
+Constraints
+
+2 <= W <= 50 2 <= L <= 50
+
+Output Format
+
+For the given integers W and L, print the hollow rectangle pattern.
+
+Sample Input 0
+
+5 4
+Sample Output 0
+
+*****
+*   *
+*   *
+*****
+Explanation 0
+
+Self Explanatory
+...............................
+
+w,l=map(int,input().split())
+print('*'*w)
+for i in range(l-2):
+    print("*",' '*(w-4),"*")
+print("*"*w)
