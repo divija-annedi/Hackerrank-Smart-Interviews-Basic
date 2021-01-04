@@ -1,0 +1,37 @@
+Given a string, check if it contains only digits.
+
+Input Format
+
+Input contains a string - S.
+
+Constraints
+
+1 <= len(S) <= 100
+
+Output Format
+
+Print "Yes" if string contains only digits, "No" otherwise.
+
+Sample Input 0
+
+123456786543
+Sample Output 0
+
+Yes
+Explanation 0
+
+Self Explanatory
+...............................
+
+n=str(input())
+numbers=['0','1','2','3','4','5','6','7','8','9']
+count=0
+for i in n:
+    if i not in numbers:
+        count=count+1
+    else:
+        pass
+if count==0:
+    print("Yes")
+else:
+    print("No")
