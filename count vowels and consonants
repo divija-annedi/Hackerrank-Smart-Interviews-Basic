@@ -1,0 +1,35 @@
+Given a string, print count of vowels and consonants of the string.
+
+Input Format
+
+Input contains a string of upperscase and lowercase characters - S.
+
+Constraints
+
+1 <= len(S) <= 100
+
+Output Format
+
+Print count of vowels and consonants for the given string, separated by space.
+
+Sample Input 0
+
+abxbbiaaspw
+Sample Output 0
+
+4 7
+Explanation 0
+
+Self Explanatory
+......................................
+
+n=str(input())
+cv=0
+cc=0
+vowels=['a','e','i','o','u','A','E','I','O','U']
+for i in n:
+    if i in vowels:
+        cv=cv+1
+    else:
+        cc=cc+1
+print(cv,cc)
