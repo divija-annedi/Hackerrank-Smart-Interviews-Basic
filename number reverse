@@ -1,0 +1,46 @@
+Given a number - N, reverse the number.
+
+Input Format
+
+Input contains a integer - N.
+
+Constraints
+
+-1018<= N <= 1018
+
+Output Format
+
+Print the reversed number.
+
+Sample Input 0
+
+1344
+Sample Output 0
+
+4431
+Explanation 0
+
+Self Explanatory.
+..................................
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long long n,rem=0,res=0;
+        cin>>n;
+   
+    while(n!=0){
+        rem=n%10;
+        res=res*10+rem;
+        n=n/10;
+    }
+    printf("%lld",res);
+    return 0;
+}
