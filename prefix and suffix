@@ -1,0 +1,59 @@
+Given a string, compute the length of longest prefix string which is same as the suffix of the string, the length of the prefix or suffix string must be less than the given input string.
+
+Input Format
+
+Input contains a string - S.
+
+Constraints
+
+1 <= len(S) <= 100
+
+Output Format
+
+Print length of longest prefix string which is same as suffix of the string.
+
+Sample Input 0
+
+smartintsmart
+Sample Output 0
+
+5
+Explanation 0
+
+Self Explanatory
+
+.............................................
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string s;
+        cin>>s;
+        int n = s.length();
+        int arr[n];
+        arr[0] = 0;
+        int len = 0;
+        for(int i = 1;i<n;){
+            if(s[len]==s[i]){
+                len++;
+                arr[i++] = len;
+            }
+            else{
+                if(len!=0){
+                    len = arr[len-1];
+                }
+                else{
+                    arr[i] = 0;
+                    i++;
+                }
+            }
+        }
+    cout<<arr[n-1];
+    return 0;
+}
